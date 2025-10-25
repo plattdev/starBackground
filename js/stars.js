@@ -1,6 +1,7 @@
 // Variables for star configuration
 const numStars = 100
 const redStars = 5
+const blueStars = 15
 
 
 // Everytime there is a call to stars.html, it will create a random white star background
@@ -32,10 +33,18 @@ for (let i = 0; i < redStars; i++) {
     star.style.height = star.style.width 
 }
 
+// Everytime there is a call to stars.html, it will create a random blue star background
+for (let i = 0; i < blueStars; i++) { 
+    const star = document.createElement('div') 
+    star.classList.add('blueStar') 
+    document.body.appendChild(star)
 
+    star.style.top = Math.random() * 100 + "dvh" 
+    star.style.left = Math.random() * 100 + "dvw"
 
-
-
+    star.style.width = Math.random() * 14 + 1 + "px"
+    star.style.height = star.style.width 
+}
 
 //crear en JS propiedades CSS para body, insertadas en HTML
 document.body.style.margin = "0"
