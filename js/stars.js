@@ -3,6 +3,9 @@ const numStars = 100
 const redStars = 5
 const blueStars = 15
 
+//Wrap up the star creation code in a function that will be called every 3 seconds 
+setInterval(() => {
+    document.body.innerHTML = '' // Clear existing stars before creating new ones
 
 // Everytime there is a call to stars.html, it will create a random white star background
 for (let i = 0; i < numStars; i++) { 
@@ -19,7 +22,7 @@ for (let i = 0; i < numStars; i++) {
     star.style.height = star.style.width //height equal to width
 }
 
-// Everytime there is a call to stars.html, it will create a random red star background
+
 for (let i = 0; i < redStars; i++) { 
     const star = document.createElement('div') 
     star.classList.add('redStar') 
@@ -33,7 +36,7 @@ for (let i = 0; i < redStars; i++) {
     star.style.height = star.style.width 
 }
 
-// Everytime there is a call to stars.html, it will create a random blue star background
+
 for (let i = 0; i < blueStars; i++) { 
     const star = document.createElement('div') 
     star.classList.add('blueStar') 
@@ -45,6 +48,8 @@ for (let i = 0; i < blueStars; i++) {
     star.style.width = Math.random() * 14 + 1 + "px"
     star.style.height = star.style.width 
 }
+
+}, 3000); // Refresh stars every 3 seconds
 
 //crear en JS propiedades CSS para body, insertadas en HTML
 document.body.style.margin = "0"
