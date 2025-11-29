@@ -31,6 +31,7 @@ setInterval(() => {
         const star = document.createElement('div')
         star.classList.add('blueStar', 'fade-in')
         document.body.appendChild(star)
+        // This code makes each image appear at a random location every 3 seconds.
         star.style.top = Math.random() * 100 + "dvh"
         star.style.left = Math.random() * 100 + "dvw"
         star.style.width = Math.random() * 6 + 1 + "px"
@@ -44,10 +45,37 @@ setInterval(() => {
     starImg.style.position = 'fixed'
     starImg.style.bottom = '10px'
     starImg.style.left = '10px'
-    starImg.style.width = '200px'
+    starImg.style.width = '70px'
+    // This code makes each image appear at a random location every 3 seconds.
     starImg.style.top = Math.random() * 100 + "dvh"
     starImg.style.left = Math.random() * 100 + "dvw"
     document.body.appendChild(starImg)
+
+    const asteroidImg = document.createElement('img')
+    asteroidImg.src = 'img/asteroid.avif'
+    asteroidImg.classList.add('asteroidImage', 'fade-in')
+    asteroidImg.alt = 'Asteroid Image'
+    asteroidImg.style.position = 'fixed'
+    asteroidImg.style.bottom = '10px'
+    asteroidImg.style.left = '120px'
+    asteroidImg.style.width = '30px'
+    // This code makes each image appear at a random location every 3 seconds.
+    asteroidImg.style.top = Math.random() * 100 + "dvh"
+    asteroidImg.style.left = Math.random() * 100 + "dvw"
+    document.body.appendChild(asteroidImg)
+
+    const saturnImg = document.createElement('img')
+    saturnImg.src = 'img/saturn.avif'
+    saturnImg.classList.add('saturnImage', 'fade-in')
+    saturnImg.alt = 'Saturn Image'
+    saturnImg.style.position = 'fixed'
+    saturnImg.style.bottom = '10px'
+    saturnImg.style.left = '170px'
+    saturnImg.style.width = '100px'
+    // This code makes each image appear at a random location every 3 seconds.
+    saturnImg.style.top = Math.random() * 100 + "dvh"
+    saturnImg.style.left = Math.random() * 100 + "dvw"
+    document.body.appendChild(saturnImg)
 }, 3000);
 
 
